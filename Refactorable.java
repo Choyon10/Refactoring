@@ -12,13 +12,18 @@ public class Refactorable {
 		printBanner();
 		
 		//calculate outstanding
+		oustanding = calculateOutstanding(e, oustanding);
+		
+		//print details
+		printDetails(oustanding);
+	}
+
+	public double calculateOutstanding(Enumeration e, double oustanding) {
 		while(e.hasMoreElements()){
 			Order each = (Order) e.nextElement();
 			oustanding += each.getAmount();
 		}
-		
-		//print details
-		printDetails(oustanding);
+		return oustanding;
 	}
 
 	public void printDetails(double oustanding) {

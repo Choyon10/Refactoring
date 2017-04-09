@@ -18,6 +18,10 @@ public class Refactorable {
 		}
 		
 		//print details
+		printDetails(oustanding);
+	}
+
+	public void printDetails(double oustanding) {
 		System.out.println("name: " + _name);
 		System.out.println("amount: " + oustanding);
 	}
